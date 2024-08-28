@@ -14,9 +14,14 @@ class Carros {
         this.gastoMedioDeCombustivel = gastoMedioDeCombustivel;
 
     }
+    calcularGastoDeViagem(distanciaEmKM, valorCombustivel){
+        return (distanciaEmKM * this.gastoMedioDeCombustivel) * valorCombustivel;
+
+    }
 
 }
 
 const onix = new Carros('Chevrolet', 'branco', 1/13);
 
 console.log(onix);
+console.log(onix.calcularGastoDeViagem(142.5, 5.87));
